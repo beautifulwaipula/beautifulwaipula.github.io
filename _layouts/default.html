@@ -16,35 +16,46 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <ul class="nav__linkgroup">
-              <li><a href="{{ site.baseurl }}/events">Upcoming Events</a></li>
-              <li><a href="{{ site.baseurl }}/events">Past Events</a></li>
-              <li><a href="{{ site.baseurl }}/events">Waipula Blog</a></li>
-            </ul>
-            <ul>
-              </li><a href="{{ site.baseurl }}/faq">F.A.Q.</a></li>
-            </ul>
-            <ul>
-              <li><a href="{{ site.baseurl }}/joinus">Join Us</a></li>
-            </ul>
-            <ul>
-              <li><a href="{{ site.baseurl }}/shop">Shop</a></li>
-            </ul>
-          </nav>
-        </header>
+    <!-- header -->
+  <header class="header__container">
+    <div class="header__logo">Waipula Village</div>
+    <div class="header__navigation">
+      <div class="header__linkgroup">
+        <ul>
+          <li class="link__item link__title">Blog</li>
+        </ul>
+      </div>
+      <div class="header__linkgroup">
+        <ul>
+          <li class="link__item link__title">Events</li>
+          <!--li class="link__item">Upcoming Events</li>
+          <li class="link__item">Past Events</li>
+          <li class="link__item">Waipula Blog</li-->
+        </ul>
+      </div>
+      <div class="header__linkgroup">
+        <ul>
+          <li class="link__item link__title">F.A.Q.</li>
+          <!--li class="link__item">Waipula Stay</li>
+          <li class="link__item">Village Info</li>
+          <li class="link__item">Collaboration</li-->
+        </ul>
+      </div>
+      <div class="header__linkgroup">
+        <ul>
+          <li class="link__item link__title">Shop</li>
+        </ul>
+      </div>
+      <div class="header__linkgroup">
+        <ul>
+          <li class="link__item link__title">Join Us</li>
+          <!--li class="link__item">Volunteer</li>
+          <li class="link__item">Collaborator</li>
+          <li class="link__item">Angel</li-->
+        </ul>
       </div>
     </div>
+  </header>
 
     <div id="main" role="main" class="container">
       {{ content }}

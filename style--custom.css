@@ -182,3 +182,24 @@ aside {
 footer {
   width: 100%;
   display: flex; }
+
+  @media screen and (min-width: 400px) and (max-width: 700px) {
+    .synopsis__item {
+      width: 100vw; }
+    .synopsis__illustration {
+      height: 80vw;  } }
+
+  @media screen and (min-width: 700px) and (max-width: 900px) {
+    .thumbnail-item {
+      width: calc((var(--site-width)/3));
+      height: calc((var(--site-width)/3)); } }
+
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .thumbnail-item {
+      width: calc((var(--site-width)/4));
+      height: calc((var(--site-width)/4)); } }
+
+  @media screen and (min-width: 1200px) and (max-width: 3000px) {
+    .thumbnail-item {
+      width: calc((var(--site-width)/5));
+      height: calc((var(--site-width)/5)); } }

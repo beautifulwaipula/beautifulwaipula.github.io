@@ -19,16 +19,13 @@
 
   .header_navigation a {
     text-decoration: none;
-    color: black;
-    padding: .25rem
+    color: var(--waipula-yellow);
   }
 
   .header_navigation a:hover {
-    color: white;
   }
 
   h1 {
-    padding-bottom: .5rem;
   }
 
   footer {
@@ -81,7 +78,6 @@
       height: 50px;
       text-align: center;
       line-height: 50px;
-      color: #fff;
       text-decoration: none;
   }
   /*Hover state for top level links*/
@@ -89,13 +85,11 @@
   }
   /*Style for dropdown links*/
   li:hover ul a {
-      color: #2f3036;
       height: 40px;
       line-height: 40px;
   }
   /*Hover state for dropdown links*/
   li:hover ul a:hover {
-      color: #fff;
   }
   /*Hide dropdown links until they are needed*/
   li ul {
@@ -119,8 +113,7 @@
   /*Style 'show menu' label button and hide it by default*/
   .show-menu {
       text-decoration: none;
-      color: #fff;
-      text-align: center;
+      text-align: right;
       padding: 10px 0;
       display: none;
   }
@@ -133,23 +126,33 @@
       display: block;
   }
   /*Responsive Styles*/
-  @media screen and (max-width : 760px){
+  @media screen and (max-width : 900px){
       /*Make dropdown links appear inline*/
+      .header_navigation a {
+        text-decoration: none;
+        color: black;
+      }
+
       ul {
           position: static;
           display: none;
+          color: black;
       }
       /*Create vertical spacing*/
       li {
+          color: black;
           margin-bottom: 1px;
+          background-color: var(--waipula-yellow);
       }
       /*Make all menu links full width*/
       ul li, li a {
           width: 100%;
+          color: black;
       }
       /*Display 'show menu' link*/
       .show-menu {
           display:block;
+          color: black;
       }
   }
 
@@ -269,25 +272,30 @@ a.synopsis__button:hover {
 }
 
 .synopsis__photoslide {
+  background-size: cover;
+  background-repeat: no-repeat;
   border: 7px solid white;
 }
 
 .synopsis__photoslide--sdgs {
+  background-image: url("images/photo-1.jpg");
   width: 90%;
   height: 45%;
   transform: rotate(-5deg) translate(0px, 25px);
 }
 
 .synopsis__photoslide--visit {
+  background-image: url("images/photo-3.jpg");
   width: 50%;
   height: 70%;
   transform: rotate(5deg) translate(0px, 25px);
 }
 
 .synopsis__photoslide--joinus {
+  background-image: url("images/photo-2.jpg");
   width: 90%;
-  height: 35%;
-  transform: rotate(5deg) translate(0px, 70px);
+  height: 45%;
+  transform: rotate(5deg) translate(0px, 25px);
 }
 
 .synopsis__title {

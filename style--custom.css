@@ -16,9 +16,6 @@
   --synopsis-margin-middle: calc((var(--site-margin) / 3) * 2);
   --site-width: 100vw; }
 
-  nav {
-    opacity: 1;
-  }
 
   .header_navigation a {
     text-decoration: none;
@@ -39,6 +36,7 @@
     text-align: center;
   }
 
+  /* responsive navigation */
   /* hamburger icon is hidden on desktops */
 
   #menu-toggle, .hamburger {
@@ -83,25 +81,20 @@
       height: 50px;
       text-align: center;
       line-height: 50px;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #fff;
-      background: #2f3036;
       text-decoration: none;
   }
   /*Hover state for top level links*/
   li:hover a {
-      background: #19c589;
   }
   /*Style for dropdown links*/
   li:hover ul a {
-      background: #f3f3f3;
       color: #2f3036;
       height: 40px;
       line-height: 40px;
   }
   /*Hover state for dropdown links*/
   li:hover ul a:hover {
-      background: #19c589;
       color: #fff;
   }
   /*Hide dropdown links until they are needed*/
@@ -125,10 +118,8 @@
   }
   /*Style 'show menu' label button and hide it by default*/
   .show-menu {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-decoration: none;
       color: #fff;
-      background: #19c589;
       text-align: center;
       padding: 10px 0;
       display: none;

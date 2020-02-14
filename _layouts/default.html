@@ -20,42 +20,32 @@
     <!-- header -->
   <header class="header__container">
     <div class="header__logo">Waipula Village</div>
-    <div class="header__navigation">
-      <div class="header__linkgroup">
-        <ul>
-          <li class="link__item link__title"><a href="{{ site.baseurl }}/blog">Blog</a></li>
-        </ul>
-      </div>
-      <div class="header__linkgroup">
-        <ul>
-          <li class="link__item link__title">Events</li>
-          <!--li class="link__item">Upcoming Events</li>
-          <li class="link__item">Past Events</li>
-          <li class="link__item">Waipula Blog</li-->
-        </ul>
-      </div>
-      <div class="header__linkgroup">
-        <ul>
-          <li class="link__item link__title"><a href="{{ site.baseurl }}/about">F.A.Q.</a></li>
-          <!--li class="link__item">Waipula Stay</li>
-          <li class="link__item">Village Info</li>
-          <li class="link__item">Collaboration</li-->
-        </ul>
-      </div>
-      <div class="header__linkgroup">
-        <ul>
-          <li class="link__item link__title">Shop</li>
-        </ul>
-      </div>
-      <div class="header__linkgroup">
-        <ul>
-          <li class="link__item link__title">Join Us</li>
-          <!--li class="link__item">Volunteer</li>
-          <li class="link__item">Collaborator</li>
-          <li class="link__item">Angel</li-->
-        </ul>
-      </div>
-    </div>
+      <nav class="header_navigation">
+        <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+        <!--a href="{{ site.baseurl }}/about">F.A.Q.</a-->
+        <label for="show-menu" class="show-menu">Show Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+        <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About ￬</a>
+            <ul class="hidden">
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">What We Do</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Portfolio ￬</a>
+            <ul class="hidden">
+                <li><a href="#">Photography</a></li>
+                <li><a href="#">Web & User Interface Design</a></li>
+                <li><a href="#">Illustration</a></li>
+            </ul>
+        </li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+      </nav>
   </header>
 
     <div id="main" role="main" class="container">

@@ -114,14 +114,19 @@ body {
   }
 
 .link__item {
-    color: var(--waipula-white);
     font-size: var(--text-s);
     line-height: var(--line-height);
     font-weight: var(--light);
   }
 
+.header__toggle {
+      font-size: var(--text-xxl);
+      color: var(--waipula-yellow);
+      line-height: var(--line-height);
+      font-weight: var(--light);
+    }
+
 .link__title {
-    color: var(--waipula-yellow);
     font-size: var(--text-m);
     font-weight: var(--bold);
   }

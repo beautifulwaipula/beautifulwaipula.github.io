@@ -131,5 +131,18 @@ body {
     font-weight: var(--bold);
   }
 
+.heading__synopsis {
+    color: var(--waipula-yellow);
+    font-size: var(--text-m);
+    font-weight: var(--bold);
+}
+
+/* Laptops and Desktops */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .heading__synopsis {
+      font-size: var(--text-m);
+  }
+}
+
 a {
     text-decoration: none; }

@@ -3,34 +3,38 @@
   /* colors */
   --waipula-red: #b92126;
   --waipula-yellow: #fcd00c;
+  --waipula-white: #ffffff;
   /* spacers */
   --spacer-s: 12px;
   --spacer-m: 24px;
   --spacer-l: 36px;
   --spacer-xl: 48px;
   --spacer-xxl: 96px;
+  --spacer-xxxl: 20vh;
   /* margins */
-  --site-margin: var(--spacer-xxl);
+  --site-margin: var(--spacer-xxxl);
   --synopsis-margin-outer: var(--site-margin);
   --synopsis-margin-inner: calc(var(--site-margin) / 3);
   --synopsis-margin-middle: calc((var(--site-margin) / 3) * 2);
   --site-width: 100vw; }
 
 
-  .header_navigation a {
-    text-decoration: none;
-    color: var(--waipula-yellow);
+  .header__container {
+    display: flex;
+    position: relative;
+    padding-top: var(--spacer-l);
+    padding-bottom: var(--spacer-xl);
+    padding-left: var(--site-margin);
+    padding-right: var(--site-margin);
+    background-color: var(--waipula-red);
+    justify-content: space-between;
   }
 
-  .header_navigation a:hover {
+  .header__logo {
   }
+
 
   h1 {
-  }
-
-  footer {
-    background: lightblue;
-    text-align: center;
   }
 
   /* responsive navigation */
@@ -55,8 +59,13 @@
 
   .header_navigation a {
     flex: 1 0;
-    text-align: center;
+    text-align: right;
+    text-decoration: none;
+    color: var(--waipula-yellow);
   }
+
+  .header_navigation a:hover {
+    }
 
   /*Strip the ul of padding and list styling*/
   ul {
@@ -69,15 +78,12 @@
   li {
       display:inline-block;
       float: left;
-      margin-right: 1px;
+      margin-left: 30px;
   }
   /*Style for menu links*/
   li a {
       display:block;
-      min-width:140px;
-      height: 50px;
       text-align: center;
-      line-height: 50px;
       text-decoration: none;
   }
   /*Hover state for top level links*/
@@ -130,6 +136,7 @@
       /*Make dropdown links appear inline*/
       .header_navigation a {
         text-decoration: none;
+        text-align: center;
         color: black;
       }
 
@@ -180,16 +187,6 @@ ul {
   list-style: none;
 }
 
-.header__container {
-  display: flex;
-  position: relative;
-  padding-top: var(--spacer-l);
-  padding-bottom: var(--spacer-xl);
-  padding-left: var(--site-margin);
-  padding-right: var(--site-margin);
-  background-color: var(--waipula-red);
-  justify-content: space-between;
-}
 
 .header__navigation {
   display: flex;
@@ -201,6 +198,8 @@ ul {
   padding-right: var(--spacer-s);
   text-align: left;
 }
+
+/* Home Page Synopsis Section */
 
 .synopsis__container {
   width: 100vw;
@@ -234,6 +233,11 @@ ul {
   padding-right: var(--synopsis-margin-outer);
 }
 
+.synopsis__button {
+  background-color: var(--waipula-red);
+  text-align: center;
+}
+
 a.synopsis__button {
   background-color: var(--waipula-yellow);
   padding: 14px 16px;
@@ -254,7 +258,7 @@ a.synopsis__button:hover {
 
 .synopsis__illustration {
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -299,15 +303,6 @@ a.synopsis__button:hover {
 }
 
 .synopsis__title {
-  background-color: var(--waipula-red);
-  color: var(--waipula-yellow);
-  font-size: var(--text-m);
-  font-weight: var(--bold);
-  text-align: center;
-}
-
-.synopsis__button {
-  background-color: var(--waipula-red);
   text-align: center;
 }
 
@@ -315,6 +310,172 @@ a.synopsis__button:hover {
   background-color: var(--waipula-yellow);
   padding-top: var(--spacer-m);
 }
+
+/* Subscription Form */
+
+.subscription__container {
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* vertical align */ }
+
+ button {
+  background-color: var(--waipula-yellow);
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+  }
+
+.form__row {
+  width: 100%;
+  padding-bottom: 1vh;
+  text-align: center;
+}
+
+/* Style the form - display items horizontally */
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* Add some margins for each label */
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+/* Style the input fields */
+.form-inline input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Style the submit button */
+.form-inline button {
+  background-color: var(--waipula-yellow);
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.form-inline button:hover {
+  background-color: var(--waipula-white);
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Style for Pages */
+.callout__container {
+  text-align: center;
+}
+
+.application__container {
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--waipula-yellow);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* vertical align */ }
+
+.form__row {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.form__row input[type='text'],
+.form__row input[type='email'] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  /* width: 100%; */
+  padding: 7px;
+  font-size: 14px;
+}
+
+.form__row label {
+  margin-bottom: 15px;
+}
+
+.form__row--legacy {
+  border: none;
+  margin-bottom: 40px;
+}
+
+.form__row--legacy legend {
+  margin-bottom: 15px;
+}
+
+.form__row--legacy .radio-label {
+  display: block;
+  font-size: 14px;
+  padding: 0 20px 0 10px;
+}
+
+.form__row--legacy input[type='radio'] {
+  margin-top: 2px;
+}
+
+.form__row--legacy .radio-label,
+.form__row--legacy input[type='radio'] {
+  float: left;
+}
+
+.form-__row select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;            /* This won't work in Chrome or Safari */
+  -webkit-appearance: none;   /* This will make it work */
+}
+
+.form__row__question {
+}
+
+.form__row textarea {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: none;
+}
+
+.form__row .instructions {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
 
 /* semantic HTML for legacy browsers */
 header {
@@ -344,25 +505,27 @@ aside {
 
 footer {
   width: 100%;
-  display: flex; }
+  text-align: center;
+  margin-bottom: 5vh; }
 
-  @media screen and (min-width: 10px) and (max-width: 900px) {
+/* Set Single Column Content
+for Laptops/Desktops and Down */
+  @media screen and (max-width: 992px) {
     .synopsis__item {
       width: 100vw; }
     .synopsis__illustration {
-      height: 70vw; }
-    /* Even margins around everything */
+      height: 55vh; }
     .synopsis__left {
-        padding-left: var(--synopsis-margin-outer);
-        padding-right: var(--synopsis-margin-outer);
+        padding-left: calc((100vw - 50vh) / 2);
+        padding-right: calc((100vw - 50vh) / 2);
       }
     .synopsis__middle {
-        padding-left: var(--synopsis-margin-outer);
-        padding-right: var(--synopsis-margin-outer);
+        padding-left: calc((100vw - 50vh) / 2);
+        padding-right: calc((100vw - 50vh) / 2);
       }
     .synopsis__right {
-        padding-left: var(--synopsis-margin-outer);
-        padding-right: var(--synopsis-margin-outer);
+        padding-left: calc((100vw - 50vh) / 2);
+        padding-right: calc((100vw - 50vh) / 2);
       }
     .synopsis__container {
         flex-direction: column;
@@ -381,17 +544,68 @@ footer {
     .synopsis__container :nth-child(12) { order: 12; }
     }
 
-  @media screen and (min-width: 900px) and (max-width: 900px) {
-    .thumbnail-item {
-      width: calc((var(--site-width)/3));
-      height: calc((var(--site-width)/3)); } }
+  /* Portrait Tablets and Large Phones */
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    }
+  /* Landscape Tablets */
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+     }
+  /* Laptops and Desktops */
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+      .synopsis__left {
+        padding-left: calc(var(--synopsis-margin-outer) / 1.5);
+        padding-right: calc(var(--synopsis-margin-inner) / 1.5);
+      }
 
-  @media screen and (min-width: 900px) and (max-width: 1200px) {
-    .thumbnail-item {
-      width: calc((var(--site-width)/4));
-      height: calc((var(--site-width)/4)); } }
+      .synopsis__middle {
+        padding-left: calc(var(--synopsis-margin-middle) / 1.5);
+        padding-right: calc(var(--synopsis-margin-middle) / 1.5);
+      }
 
-  @media screen and (min-width: 1200px) and (max-width: 3000px) {
-    .thumbnail-item {
-      width: calc((var(--site-width)/5));
-      height: calc((var(--site-width)/5)); } }
+      .synopsis__right {
+        padding-left: calc(var(--synopsis-margin-inner) / 1.5);
+        padding-right: calc(var(--synopsis-margin-outer) / 1.5);
+      }}
+  /* Extra Large Laptops and Desktops */
+  @media screen and (min-width: 1200px) {
+      }
+
+/* Application Form */
+@media only screen and (min-width: 700px) {
+  .speaker-form-header,
+  .speaker-form {
+    width: 600px;
+  }
+  .form__row {
+    flex-direction: row;
+    align-items: flex-start; /* To avoid stretching */
+    margin-bottom: 20px;
+  }
+  .form__row input[type='text'] {
+    width: 250px;
+    height: initial;
+  }
+  .form__row label {
+    text-align: right;
+    width: 120px;
+    margin-top: 7px;
+    padding-right: 20px;
+  }
+  .form__row--legacy {
+  margin-bottom: 10px;
+  }
+  .form__row--legacy legend {
+  width: 120px;
+  text-align: right;
+  padding-right: 20px;
+  }
+  .form__row--legacy legend {
+  float: left;
+}
+  .form__row__question {
+  margin-left: 120px;
+  }
+  .form__row textarea {
+  margin-left: 120px;
+  }
+}

@@ -132,7 +132,7 @@
       display: block;
   }
   /*Responsive Styles*/
-  @media screen and (max-width : 900px){
+  @media screen and (max-width : 992px){
       /*Make dropdown links appear inline*/
       .header_navigation a {
         text-decoration: none;
@@ -511,6 +511,10 @@ footer {
 /* Set Single Column Content
 for Laptops/Desktops and Down */
   @media screen and (max-width: 992px) {
+    .header__container {
+        padding-left: calc((100vw - 50vh) / 2);
+        padding-right: calc((100vw - 50vh) / 2);
+    }
     .synopsis__item {
       width: 100vw; }
     .synopsis__illustration {
@@ -552,6 +556,10 @@ for Laptops/Desktops and Down */
      }
   /* Laptops and Desktops */
   @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .header__container {
+      padding-left: calc(var(--synopsis-margin-outer) / 1.5);
+      padding-right: calc(var(--synopsis-margin-outer) / 1.5);
+    }
       .synopsis__left {
         padding-left: calc(var(--synopsis-margin-outer) / 1.5);
         padding-right: calc(var(--synopsis-margin-inner) / 1.5);

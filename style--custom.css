@@ -18,7 +18,6 @@
   --synopsis-margin-middle: calc((var(--site-margin) / 3) * 2);
   --site-width: 100vw; }
 
-
   .header__container {
     display: flex;
     position: relative;
@@ -476,6 +475,17 @@ a.synopsis__button:hover {
   margin-bottom: 30px;
 }
 
+/* blog styles */
+.blog__container {
+    display: flex;
+    position: relative;
+    padding-top: var(--spacer-l);
+    padding-bottom: var(--spacer-xl);
+    padding-left: var(--site-margin);
+    padding-right: var(--site-margin);
+    background-color: var(--waipula-red);
+    justify-content: space-between;
+}
 
 /* semantic HTML for legacy browsers */
 header {
